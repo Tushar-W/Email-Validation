@@ -3,7 +3,7 @@ shopt -s extglob #turn on extended globbing
 
 echo "Welcome To Email Validation"
 #PATTERN
-pattern="^[.]{1}[a-z]{2,4}$"
+pattern="^([._+-]{1}[0-9a-zA-Z]+)?$"
 
 #checking email pattern valid or not
 function checkPattern() {
@@ -16,5 +16,5 @@ function checkPattern() {
 }
 
 #read input from user
-read -p "Enter Eamil Address:" email
+read -p "Enter Email Address:" email
 checkPattern
